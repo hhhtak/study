@@ -8,7 +8,7 @@ import Logo from './../../app/components/Logo.vue';
 storiesOf('Logo', module)
   .add('story as a template',
     // () => '<my-button :rounded="true">story as a function template</my-button>'
-    '<Logo />'
+    () => '<Logo />'
   )
   // .add('story as a component', () => ({
   //   components: { MyButton },
