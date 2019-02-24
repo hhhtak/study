@@ -22,6 +22,18 @@ function loadStories() {
   // You can require as many stories as you need.
   // require('../src/stories');
   require('../stories');
+  // require('../../app/components');
+  // require('../../app/components');
 }
 
 configure(loadStories, module);
+
+// import { configure } from "@storybook/vue";
+//
+// const req = require.context("../../app/components", true, /stories.js$/); // ①
+//
+// function loadStories() {
+//   req.keys().forEach(filename => req(filename)); // ②
+// }
+//
+// configure(loadStories, module);
