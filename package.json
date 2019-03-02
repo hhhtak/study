@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.5"
+    "nuxt": "^2.4.5",
+    "vue": "^2.6.8"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
