@@ -28,8 +28,13 @@ export default {
 
 <style scoped>
 button {
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
   width: 100%;
-  background-color: #fff;
+  border: 1px solid #111;
+  border-radius: 5px;
   font-size: 16px;
 }
 
