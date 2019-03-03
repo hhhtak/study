@@ -1,7 +1,7 @@
 const pkg = require("./package")
 
 module.exports = {
-  rootDir: "app",
+  rootDir: "src",
   mode: "universal",
 
   /*
