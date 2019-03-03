@@ -1,6 +1,8 @@
 <template>
   <button :class="setSize">
-    <p class="text">{{ text }}</p>
+    <p class="text">
+      {{ text }}
+    </p>
   </button>
 </template>
 
@@ -10,7 +12,7 @@ export default {
   props: {
     text: {
       type: String,
-      default: "",
+      default: ""
     },
     size: {
       type: String,
@@ -50,5 +52,4 @@ button.bg {
   padding: 8px;
   text-align: center;
 }
-
 </style>
