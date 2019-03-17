@@ -14,7 +14,8 @@
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey"
-          >GitHub
+        >
+          GitHub
         </a>
       </div>
     </div>
@@ -22,12 +23,12 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo/Logo.vue'
+import Logo from "~/components/Logo/Logo.vue";
 
 export default {
   components: {
-    Logo,
-  },
+    Logo
+  }
 };
 </script>
 
@@ -42,8 +43,8 @@ export default {
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
