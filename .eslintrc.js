@@ -4,10 +4,10 @@ module.exports = {
     browser: true,
     node: true
   },
-  parser: 'vue-eslint-parser', // parserをvue用に指定
+  parser: "vue-eslint-parser", // parserをvue用に指定
   parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module',
+    parser: "babel-eslint",
+    sourceType: "module"
   },
   extends: [
     "eslint:recommended",
@@ -15,21 +15,25 @@ module.exports = {
     // より厳しいルールにするには`plugin:vue/strongly-recommended` もしくは `plugin:vue/recommended` に切り替えることを検討してください。
     "plugin:prettier/recommended",
     "plugin:vue/recommended",
-    'prettier/vue',
+    "prettier/vue"
   ],
   // *.vue ファイルを lint にかけるために必要
-  plugins: [
-    'vue',
-    'prettier'
-  ],
+  plugins: ["vue", "prettier"],
   // ここにカスタムルールを追加します。
   rules: {
+    "generator-star-spacing": "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "arrow-parens": 0,
+    "one-var": 0,
+    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+    "vue/html-indent": ["error", 2],
+
     "prettier/prettier": [
       "error",
       {
-        "singleQuote": true,
-        "trailingComma": "es5"
+        singleQuote: true,
+        trailingComma: "es5"
       }
     ]
   }
-}
+};
