@@ -22,7 +22,6 @@ module.exports = {
   // ここにカスタムルールを追加します。
   rules: {
     "generator-star-spacing": "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
     "arrow-parens": 0,
     "one-var": 0,
     "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
