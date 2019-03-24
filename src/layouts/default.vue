@@ -6,18 +6,15 @@
 
 <script>
 export default {
-  computed: {
-    aaa() {
-      console.log('aaaaaaaa')
-      return ''
-    }
-  },
   mounted() {
     console.log('mounted')
   },
   methods: {
     nnn() {
       console.log('nnn')
+    },
+    aaa() {
+      console.log('aaaaaaaa')
     }
   }
 }
