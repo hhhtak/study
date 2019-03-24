@@ -1,12 +1,12 @@
-import { storiesOf } from '@storybook/vue';
-import Button from './Button.vue';
+import { storiesOf } from '@storybook/vue'
+import Button from './Button.vue'
 
 storiesOf('Button', module).add('default', () => ({
   components: { Button },
   data() {
     return {
-      sizes: ['md', 'bg'],
-    };
+      sizes: ['md', 'bg']
+    }
   },
   template: `
     <section style="margin: 36px">
@@ -15,5 +15,5 @@ storiesOf('Button', module).add('default', () => ({
         <Button text="sample button" :size="size" />
       </div>
     </section>
-  `,
-}));
+  `
+}))
