@@ -12,20 +12,20 @@ export default {
   props: {
     text: {
       type: String,
-      default: '',
+      default: ''
     },
     size: {
       type: String,
       default: 'md',
-      validate: ['md', 'bg'],
-    },
+      validate: ['md', 'bg']
+    }
   },
   computed: {
     setSize() {
-      return this.size;
-    },
-  },
-};
+      return this.size
+    }
+  }
+}
 </script>
 
 <style scoped>
