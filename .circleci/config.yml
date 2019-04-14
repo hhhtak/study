@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test:
     docker:
       - image: circleci/node:11.9
     working_directory: ~/src
@@ -16,10 +16,12 @@ jobs:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
           name: lint
-          command: |
-            mkdir -p /tmp/test-reports/eslint
-            node_modules/.bin/eslint . --format junit --output-file /tmp/test-reports/eslint/results.xml
-          store_test_results:
-            path: /tmp/test-reports
+          command: yarn run lint
       - run: npm test
       - run: npm build
+
+workflows:
+  version: 2
+  build-workflow:
+    jobs:
+      - test
