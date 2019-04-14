@@ -9,10 +9,17 @@ jobs:
       - restore_cache:
           keys:
             - dependency-cache-{{ checksum "package.json" }}
-      - run: npm
+      - run: npm install
       - save_cache:
           paths:
             - node_modules
           key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: lint
+          command: |
+            mkdir -p /tmp/test-reports/eslint
+            node_modules/.bin/eslint . --format junit --output-file /tmp/test-reports/eslint/results.xml
+          store_test_results:
+            path: /tmp/test-reports
       - run: npm test
       - run: npm build
