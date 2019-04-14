@@ -19,3 +19,9 @@ jobs:
           command: yarn run lint
       - run: npm test
       - run: npm build
+
+workflows:
+  version: 2
+  build-workflow:
+    jobs:
+      - test
